@@ -1,5 +1,5 @@
 #!groovy
-// Run docker build
+// Run docker build0
 properties([disableConcurrentBuilds()])
 
 pipeline {
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                	sh 'docker build  . '
+                	sh 'docker build -t nic11371/toolbox:latest . '
 						// -t nic11371/toolbox:latest
                 }
             }
